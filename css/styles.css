@@ -13,15 +13,43 @@ body {
     font-family: var(--fontMain);
 }
 
+header, footer {
+    padding: 0.5rem 1rem;
+    text-align: center;
+}
+header {
+    color: var(--colorSecondary);
+
+    h1 {
+        font-family: var(--fontTitle);
+    }
+}
+
+main {
+    margin: 1rem;
+}
+
+footer {
+    color: var(--colorBgMain);
+    background-color: var(--colorSecondary);
+}
+
 nav {
     ul {
         display: flex;
         flex-flow: row nowrap;
         justify-content: center;
-        gap: 1rem; 
+        gap: 1rem;
         li {
             list-style-type: none;
         }
     }
 }
 
+a {
+    color: var(--colorSecondary);
+    text-decoration: none;
+    &:hover {
+        font-weight: bold;
+    }
+}
