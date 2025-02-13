@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Food repo</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/recipes.css">
+    <script src="js/recipes.js" type="module"></script>
     
 </head>
 <body>
@@ -21,7 +23,7 @@
     </nav>
 
     <main>
-        <section>
+        <section id="recipe-list">
             <p>Up to come</p>
         </section>
     </main>
@@ -30,4 +32,22 @@
         <p>&copy; 2025 K&oslash;benhavns Erhversakademi Development</p>
     </footer>
 </body>
+
+<!-- Templaten klones i recipes.js, før den udfyldes med data fra api'en -->
+
+<template id="recipe-card">
+    <article>
+        <header>
+            <h2></h2>
+        </header>
+
+        <img src="" alt="">
+
+        <div>
+            <p class="pill"></p>
+            <p class="pill"></p>
+        </div>
+    </article>
+</template>
+
 </html>
