@@ -1,3 +1,16 @@
+@media (min-width: 640px) {
+    #wrapper {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        gap: 1rem;
+        > section {
+            flex: 1 0 auto;
+        }
+    }
+}
+
+
 #contact_info {
     margin-bottom: 1rem;
 }
@@ -39,6 +52,31 @@ form {
             background-color: var(--colorSecondary);
             border: none;
         }
+    }
+}
+
+#contact_message {
+    margin: auto;
+    padding: 1rem;
+    border-radius: 1rem;
+
+    header {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        gap: 1rem;
+
+        padding: 0;
+
+        button.close {
+            height: 0.5rem;
+            border: none;
+            background-color: var(--colorBgMain);
+        }
+    }
+
+    ul {
+        margin-left: 1.5rem;
     }
 }
 
