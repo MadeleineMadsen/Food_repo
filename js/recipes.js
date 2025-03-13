@@ -11,10 +11,11 @@ const DEFAULT_RECIPES = 10;
     // - Kan føre til sikkerhedsproblemer, hvis data ikke er sanitiseret (f.eks. risiko for XSS-angreb).
     // - Manglende asynkron håndtering: fetch-kald sker asynkront, hvilket betyder, at elementerne ikke nødvendigvis tilføjes i rækkefølge.
 
+// eslint-disable-next-line no-unused-vars
 const showRandomRecipesWithInnerHTML = (numRecipes = DEFAULT_RECIPES) => {
 
-    let recipeList = ''
     for (let index = 0; index < numRecipes; index++) {
+
         fetch(`${BASE_URL}/random.php`)
         .then(response => response.json())
         .then(data => {
@@ -46,6 +47,7 @@ const showRandomRecipesWithInnerHTML = (numRecipes = DEFAULT_RECIPES) => {
     // - Mere effektiv end metode 1, fordi den kun opdaterer DOM én gang, men stadig ikke optimal.
     // - API-kaldene udføres sekventielt, ikke parallelt, hvilket gør metoden langsommere.
 
+// eslint-disable-next-line no-unused-vars
 const showRandomRecipesWithInnerHTMLAndOnePageRefresh = async (numRecipes = DEFAULT_RECIPES) => {
 
     let recipeList = '';
@@ -85,7 +87,7 @@ const showRandomRecipesWithInnerHTMLAndOnePageRefresh = async (numRecipes = DEFA
 
 // Anbefales, da det er god metode, men HTML templates er endnu bedre (4 metode).
 
-
+// eslint-disable-next-line no-unused-vars
 const showRandomRecipesWithCreateElement = async (numRecipes = DEFAULT_RECIPES) => {
 
     const fragment = document.createDocumentFragment();
@@ -164,6 +166,10 @@ const showRandomRecipes = async (numRecipes = DEFAULT_RECIPES) => {
 
             card.querySelector('.pill:first-of-type').innerText = data.strCategory;
             card.querySelector('.pill:last-of-type').innerText = data.strArea;
+
+            card.querySelectorAll('a').forEach(link => {
+                link.href = `recipe.html?id=${data.idMeal}`;
+            });
 
             fragment.append(card);
         })
