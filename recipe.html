@@ -3,47 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food repo</title>
+    <title>Food Repo</title>
     <link rel="stylesheet" href="css/recipe.css">
     <script src="js/nav.js" type="module"></script>
     <script src="js/recipe.js" type="module"></script>
-    
 </head>
 <body>
+
     <header>
         <h1>Food Repo</h1>
     </header>
 
-    <nav>
-        <ul>
+    <nav id="main">
+        <ul>    
             <li><a href="index.html" title="Homepage">Home</a></li>
             <li><button id="btnAbout">About</button></li>
-            <li><a href="contact.html" title="Contact page">Contact</a></li>
+            <li><a href="contact.htm" title="Contact page">Contact</a></li>
+        </ul>
+    </nav>
+
+    <nav id="utility_not_logged">
+        <ul>
+            <li><a href="login.htm" title="Log in">Log in</a></li>
+            <li><a href="signup.htm" title="Sign up">Sign up</a></li>
+        </ul>
+    </nav>
+
+    <nav id="utility_logged">
+        <ul>
+            <li><a href="favourites.htm" title="Favourites">Favourites</a></li>
+            <li><button id="btnLogout">Logout</button></li>
         </ul>
     </nav>
 
     <main>
         <section>
+
             <header>
                 <h2></h2>
+                <button id="btnFavourite" class="hidden">&#9734;</button>
             </header>
+
+            <section id="error" class="hidden">
+                <header>
+                    <h3>Error</h3>
+                </header>
+
+                <p id="errorText"></p>
+            </section>
 
             <img src="" alt="" id="picture_meal">
 
             <p id="description"></p>
 
             <section id="ingredients">
+
                 <header>
                     <h3>Ingredients</h3>
                 </header>
 
-                <ul></ul>
+                <ul>
+                </ul>
             </section>
         </section>
     </main>
-
+    
     <footer>
-        <p>&copy; 2025 K&oslash;benhavns Erhversakademi Development</p>
+        <p>&copy; 2025 K&oslash;benhavns Erhvervsakademi Development</p>
     </footer>
 </body>
-</html>

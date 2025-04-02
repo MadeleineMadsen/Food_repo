@@ -3,22 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food repo</title>
+    <title>Contact | Food Repo</title>
     <link rel="stylesheet" href="css/contact.css">
     <script src="js/nav.js" type="module"></script>
     <script src="js/contact.js" type="module"></script>
-    
 </head>
 <body>
     <header>
         <h1>Food Repo</h1>
     </header>
 
-    <nav>
-        <ul>
+    <nav id="main">
+        <ul>    
             <li><a href="index.html" title="Homepage">Home</a></li>
             <li><button id="btnAbout">About</button></li>
             <li><a href="contact.html" title="Contact page">Contact</a></li>
+        </ul>
+    </nav>
+
+    <nav id="utility_not_logged">
+        <ul>
+            <li><a href="login.html" title="Log in">Log in</a></li>
+            <li><a href="signup.html" title="Sign up">Sign up</a></li>
+        </ul>
+    </nav>
+
+    <nav id="utility_logged">
+        <ul>
+            <li><a href="favourites.htm" title="Favourites">Favourites</a></li>
+            <li><button id="btnLogout">Logout</button></li>
         </ul>
     </nav>
 
@@ -26,21 +39,21 @@
         <header>
             <h2>Contact</h2>
         </header>
-    
+
         <div id="wrapper">
             <section id="contact_info">
+
                 <header>
-                    <h3>Contact information</h3> 
+                    <h3>Contact information</h3>
                 </header>
 
                 <address>
-                <div id="physical_address">
-                    <p>Guldbergsgade 29n</p>
-                    <p>2200 K&oslash;benhavn N</p>
-                </div>
-
-                <p>Phone no.: <a href="tel:+45 46 46 00 00">+45 46 46 00 00</a></p>
-                <p>Email adress: <a 
+                    <div id="physical_address">
+                        <p>Guldbergsgade 29N</p>
+                        <p>2200 K&oslash;benhavn N</p>
+                    </div>
+                    <p>Phone no.: <a href="tel:+45 46 46 00 00">+45 46 46 00 00</a></p>
+                <p>Email address: <a 
                     href="mailto:foodrepo@kea.dk" 
                     title="Send an email to Food Repo">foodrepo@kea.dk</a></p>
                 </address>
@@ -50,7 +63,7 @@
                 <header>
                     <h3>Contact form</h3>
                 </header>
-                
+
                 <form id="frmContact">
                     <fieldset>
                         <div>
@@ -67,7 +80,7 @@
                             <label for="txtComments">Comments</label>
                             <textarea id="txtComments" required></textarea>
                         </div>
-
+                        
                         <div>
                             <button type="submit">Send comment</button>
                         </div>
@@ -78,25 +91,29 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 K&oslash;benhavns Erhversakademi Development</p>
+        <p>&copy; 2025 K&oslash;benhavns Erhvervsakademi Development</p>
     </footer>
+
 </body>
+
 <dialog id="contact_message">
+
     <header>
         <h2>We got you</h2>
         <button class="close">&times;</button>
     </header>
 
-    <search>
+    <section>
         <p>Thank you for your message. We will get back to you shortly.</p>
+
         <div>
-            <p>Registered information</p>
+            <p>Registered information:</p>
             <ul>
-                <li>Name: <span id="name"></span> </li>
-                <li>Email: <span id="email"></span> </li>
-                <li>Comments: <span id="comments"></span> </li>
+                <li>Name: <span id="name"></span></li>
+                <li>Email: <span id="email"></span></li>
+                <li>Comments: <span id="comments"></span></li>
             </ul>
         </div>
-    </search>
+    </section>
 </dialog>
 </html>

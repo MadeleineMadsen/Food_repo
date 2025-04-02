@@ -3,53 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food repo</title>
+    <title>Home | Food Repo</title>
     <link rel="stylesheet" href="css/recipes.css">
     <script src="js/nav.js" type="module"></script>
     <script src="js/recipes.js" type="module"></script>
-    
 </head>
 <body>
+
     <header>
         <h1>Food Repo</h1>
     </header>
 
-    <nav>
-        <ul>
+    <nav id="main">
+        <ul>    
             <li><a href="index.html" title="Homepage">Home</a></li>
             <li><button id="btnAbout">About</button></li>
             <li><a href="contact.html" title="Contact page">Contact</a></li>
         </ul>
     </nav>
 
+    <nav id="utility_not_logged">
+        <ul>
+            <li><a href="login.html" title="Log in">Log in</a></li>
+            <li><a href="signup.html" title="Sign up">Sign up</a></li>
+        </ul>
+    </nav>
+
+    <nav id="utility_logged">
+        <ul>
+            <li><a href="favourites.htm" title="Favourites">Favourites</a></li>
+            <li><button id="btnLogout">Logout</button></li>
+        </ul>
+    </nav>
+
     <main>
+
+        <header>
+            <h2>Recipes</h2>
+        </header>
+
+        <section id="error" class="hidden">
+            <header>
+                <h3>Error</h3>
+            </header>
+
+            <p id="errorText"></p>
+        </section>
+
         <section id="recipe-list">
 
         </section>
+
     </main>
 
     <footer>
-        <p>&copy; 2025 K&oslash;benhavns Erhversakademi Development</p>
+        <p>&copy; 2025 K&oslash;benhavns Erhvervsakademi Development</p>
     </footer>
+
+    <!-- Templaten klones i recipes.js, før den udfyldes med data fra api'en -->
+    <template id="recipe-card">
+
+        <article>
+            <header>
+                <h2><a href=""></a></h2>
+            </header>
+
+            <a href="">
+                <img src="" alt="">
+            </a>
+            
+            <div>
+                <p class="pill"></p>
+                <p class="pill"></p>
+            </div>
+        </article>
+    </template>
 </body>
-
-<!-- Templaten klones i recipes.js, før den udfyldes med data fra api'en -->
-
-<template id="recipe-card">
-    <article>
-        <header>
-            <h2><a href=""></a></h2>
-        </header>
-
-        <a href="">
-            <img src="" alt="">
-        </a>
-
-        <div>
-            <p class="pill"></p>
-            <p class="pill"></p>
-        </div>
-    </article>
-</template>
-
 </html>
